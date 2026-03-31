@@ -1,0 +1,514 @@
+/* Stitch Design System 主题样式 */
+
+/* ==========================================================================
+   Color System - 墨分五色色彩系统
+   ========================================================================== */
+
+:root {
+  /* 基础色彩 */
+  --color-white: #ffffff;
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  /* 墨色系统 */
+  --ink-deep: #0f0f0f;          /* 浓墨 */
+  --ink-medium: #2d2d2d;        /* 重墨 */
+  --ink-light: #5a5a5a;         /* 淡墨 */
+
+  /* 宣纸系统 */
+  --paper-warm: #fefcf8;        /* 暖宣纸 */
+  --paper-cool: #faf9f7;        /* 冷宣纸 */
+  --paper-pure: #ffffff;        /* 纯白 */
+
+  /* 朱砂系统 */
+  --cinnabar: #e54d42;          /* 正朱砂 */
+  --cinnabar-light: #ff6b6b;    /* 亮朱砂 */
+  --cinnabar-dark: #c9302c;     /* 暗朱砂 */
+
+  /* 金粉系统 */
+  --gold: #f39c12;              /* 正金粉 */
+  --gold-light: #f7b731;       /* 亮金粉 */
+  --gold-dark: #e67e22;        /* 暗金粉 */
+
+  /* 银朱系统 */
+  --silver: #95a5a6;            /* 正银朱 */
+  --silver-light: #bdc3c7;     /* 亮银朱 */
+  --silver-dark: #7f8c8d;      /* 暗银朱 */
+
+  /* 功能色彩 */
+  --success: #27ae60;           /* 翠竹绿 */
+  --warning: #f39c12;           /* 金粉 */
+  --error: #e54d42;             /* 朱砂 */
+  --info: #3498db;              /* 青花蓝 */
+
+  /* Alpha通道色彩 */
+  --cinnabar-alpha: rgba(229, 77, 66, 0.1);
+  --gold-alpha: rgba(243, 156, 18, 0.1);
+  --silver-alpha: rgba(149, 165, 166, 0.1);
+  --accent-alpha: rgba(170, 59, 255, 0.1);
+}
+
+/* 渐变系统 */
+:root {
+  --gradient-ink: linear-gradient(180deg, var(--ink-deep) 0%, var(--ink-medium) 100%);
+  --gradient-paper: linear-gradient(135deg, var(--paper-warm) 0%, #f8f6f0 100%);
+  --gradient-accent: linear-gradient(135deg, var(--cinnabar) 0%, var(--gold) 100%);
+  --gradient-silver: linear-gradient(135deg, var(--silver) 0%, #bdc3c7 100%);
+  --gradient-gold: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  --gradient-success: linear-gradient(135deg, var(--success) 0%, #2ecc71 100%);
+}
+
+/* 阴影系统 */
+:root {
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  --soft-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --medium-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --strong-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* 字体系统 */
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-mono: ui-monospace, 'SF Mono', monospace;
+  --font-body: var(--font-sans);
+  --font-heading: var(--font-serif);
+  --font-code: var(--font-mono);
+}
+
+/* 字号系统 */
+:root {
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 1.875rem;  /* 30px */
+  --text-4xl: 2.25rem;   /* 36px */
+  --text-5xl: 3rem;      /* 48px */
+  --text-6xl: 3.75rem;   /* 60px */
+
+  /* 行高 */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+}
+
+/* 间距系统 */
+:root {
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+
+  /* 组件内边距 */
+  --padding-xs: var(--space-2);
+  --padding-sm: var(--space-3);
+  --padding-md: var(--space-4);
+  --padding-lg: var(--space-6);
+  --padding-xl: var(--space-8);
+
+  /* 组件外边距 */
+  --margin-xs: var(--space-2);
+  --margin-sm: var(--space-3);
+  --margin-md: var(--space-4);
+  --margin-lg: var(--space-6);
+  --margin-xl: var(--space-8);
+}
+
+/* 圆角系统 */
+:root {
+  --radius-xs: 0.125rem;  /* 2px */
+  --radius-sm: 0.25rem;   /* 4px */
+  --radius-md: 0.5rem;    /* 8px */
+  --radius-lg: 0.75rem;   /* 12px */
+  --radius-xl: 1rem;      /* 16px */
+  --radius-2xl: 1.5rem;   /* 24px */
+  --radius-full: 9999px;
+}
+
+/* ==========================================================================
+   Component Base Styles - 组件基础样式
+   ========================================================================== */
+
+/* Button Base */
+.stitch-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--padding-md) var(--padding-lg);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.stitch-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.4s ease;
+}
+
+.stitch-button:hover::before {
+  left: 100%;
+}
+
+.stitch-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Button Variants */
+.stitch-button-primary {
+  background: var(--gradient-accent);
+  color: white;
+  box-shadow: var(--soft-shadow);
+}
+
+.stitch-button-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: var(--medium-shadow);
+}
+
+.stitch-button-secondary {
+  background: var(--gradient-silver);
+  color: white;
+  box-shadow: var(--soft-shadow);
+}
+
+.stitch-button-success {
+  background: var(--gradient-success);
+  color: white;
+  box-shadow: var(--soft-shadow);
+}
+
+.stitch-button-outline {
+  background: transparent;
+  color: var(--ink-medium);
+  border: 2px solid var(--gray-300);
+}
+
+.stitch-button-outline:hover:not(:disabled) {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-alpha);
+  color: var(--cinnabar);
+}
+
+/* Input Base */
+.stitch-input {
+  width: 100%;
+  padding: var(--padding-md) var(--padding-lg);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-snug);
+  background: var(--paper-pure);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  resize: vertical;
+}
+
+.stitch-input:focus {
+  outline: none;
+  border-color: var(--cinnabar);
+  box-shadow: 0 0 0 3px var(--cinnabar-alpha);
+  background: var(--color-white);
+}
+
+.stitch-input::placeholder {
+  color: var(--gray-400);
+}
+
+/* Card Base */
+.stitch-card {
+  background: var(--paper-pure);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--soft-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.stitch-card:hover {
+  box-shadow: var(--medium-shadow);
+  transform: translateY(-2px);
+}
+
+.stitch-card-header {
+  padding: var(--padding-lg);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.stitch-card-body {
+  padding: var(--padding-lg);
+}
+
+.stitch-card-footer {
+  padding: var(--padding-lg);
+  border-top: 1px solid var(--gray-200);
+}
+
+/* ==========================================================================
+   Interactive Elements - 交互元素
+   ========================================================================== */
+
+/* Difficulty Option */
+.difficulty-option {
+  cursor: pointer;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: var(--padding-lg) var(--padding-xl);
+  transition: all 0.3s ease;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.difficulty-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: calc(var(--radius-xl) - 2px);
+  z-index: -1;
+}
+
+.difficulty-option:hover {
+  border-color: var(--cinnabar);
+  transform: translateY(-2px);
+  box-shadow: var(--soft-shadow);
+}
+
+.difficulty-option.selected {
+  border-color: var(--cinnabar);
+  background: var(--cinnabar-alpha);
+  color: var(--cinnabar);
+  transform: translateY(-1px);
+}
+
+/* Character Selectable */
+.char-selectable {
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.char-selectable:hover {
+  background: var(--accent-alpha);
+}
+
+.char-selectable.selected {
+  background: var(--cinnabar);
+  color: white;
+  font-weight: 600;
+}
+
+.char-selectable.high-importance {
+  background: var(--cinnabar-alpha);
+  border: 1px dashed var(--cinnabar);
+}
+
+.char-selectable.medium-importance {
+  background: var(--gold-alpha);
+  border: 1px dashed var(--gold);
+}
+
+.char-selectable.low-importance {
+  background: var(--silver-alpha);
+  border: 1px dashed var(--silver);
+}
+
+/* ==========================================================================
+   Typography - 文字样式
+   ========================================================================== */
+
+.stitch-h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  color: var(--ink-deep);
+}
+
+.stitch-h2 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  letter-spacing: -0.01em;
+  color: var(--ink-medium);
+}
+
+.stitch-h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  color: var(--ink-medium);
+}
+
+.stitch-body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--ink-light);
+}
+
+.stitch-caption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  color: var(--gray-500);
+}
+
+/* ==========================================================================
+   Layout Utilities - 布局工具类
+   ========================================================================== */
+
+.flex { display: flex; }
+.grid { display: grid; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+
+.gap-2 { gap: var(--space-2); }
+.gap-4 { gap: var(--space-4); }
+.gap-6 { gap: var(--space-6); }
+
+.p-4 { padding: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+.py-4 { padding-block: var(--space-4); }
+.py-6 { padding-block: var(--space-6); }
+.px-4 { padding-inline: var(--space-4); }
+.px-6 { padding-inline: var(--space-6); }
+
+.m-4 { margin: var(--space-4); }
+.my-4 { margin-block: var(--space-4); }
+.mx-auto { margin-inline: auto; }
+
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+.max-w-full { max-width: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* ==========================================================================
+   Dark Mode Support - 暗色模式
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 暗色基础色彩 */
+    --paper-warm: #1a1a1a;
+    --paper-pure: #161616;
+
+    /* 暗色文字色彩 */
+    --ink-deep: #f5f5f5;
+    --ink-medium: #e0e0e0;
+    --ink-light: #cccccc;
+
+    /* 暗色功能色彩 */
+    --cinnabar: #ff6b6b;
+    --gold: #f7b731;
+    --silver: #bdc3c7;
+
+    /* 调整alpha值 */
+    --cinnabar-alpha: rgba(255, 107, 107, 0.15);
+    --gold-alpha: rgba(247, 183, 49, 0.15);
+    --silver-alpha: rgba(189, 195, 199, 0.15);
+    --accent-alpha: rgba(170, 59, 255, 0.15);
+  }
+
+  .stitch-card {
+    background: var(--paper-warm);
+    border-color: var(--gray-700);
+  }
+
+  .stitch-input {
+    background: var(--paper-warm);
+    border-color: var(--gray-600);
+    color: var(--ink-medium);
+  }
+
+  .stitch-input:focus {
+    border-color: var(--cinnabar);
+    box-shadow: 0 0 0 3px var(--cinnabar-alpha);
+  }
+
+  .stitch-input::placeholder {
+    color: var(--gray-500);
+  }
+
+  /* 暗色按钮 */
+  .stitch-button-outline {
+    border-color: var(--gray-600);
+    color: var(--gray-300);
+  }
+
+  .stitch-button-outline:hover:not(:disabled) {
+    border-color: var(--cinnabar);
+    background: var(--cinnabar-alpha);
+    color: var(--cinnabar);
+  }
+}

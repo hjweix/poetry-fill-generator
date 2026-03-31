@@ -1,13 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>poetry-fill-generator</title>
+    <meta name="description" content="诗词填空生成器 - 一个简单易用的Web工具，支持输入诗词文本并自动生成填空考试题，导出为Word文档格式" />
+    <meta name="keywords" content="诗词, 填空题, 教育工具, 古诗词学习, 考试题生成" />
+    <meta name="author" content="诗词填空生成器" />
+    <meta name="theme-color" content="#4a90d9" />
+    <meta name="color-scheme" content="light" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="诗词填空生成器" />
+    <meta property="og:description" content="输入诗词，自动生成填空考试题，一键导出Word文档" />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- Performance hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>诗词填空生成器 - 传承千年文韵，体验诗词之美</title>
   </head>
   <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">跳转到主要内容</a>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Noscript fallback -->
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>诗词填空生成器</h1>
+        <p>请启用JavaScript以使用此应用。</p>
+      </div>
+    </noscript>
   </body>
 </html>

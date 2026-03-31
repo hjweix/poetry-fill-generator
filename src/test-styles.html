@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>诗词填空生成器 - 样式测试</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    :root {
+      --paper-warm: #fefcf8;
+      --ink-deep: #0f0f0f;
+      --cinnabar: #e54d42;
+      --gold: #f39c12;
+    }
+
+    body {
+      font-family: 'Inter', 'Noto Serif SC', sans-serif;
+      background: linear-gradient(135deg, var(--paper-warm) 0%, #f8f6f0 100%);
+      color: var(--ink-deep);
+      margin: 0;
+      padding: 2rem;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle at 15% 25%, rgba(229, 77, 66, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 85% 75%, rgba(243, 156, 18, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--cinnabar) 0%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .button {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--cinnabar) 0%, var(--gold) 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin: 1rem;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(229, 77, 66, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>诗词填空生成器</h1>
+    <p>宣纸纹理背景效果测试</p>
+
+    <div class="card">
+      <h2>功能特性</h2>
+      <p>✅ 宣纸纹理背景<br>
+         ✅ 墨色渐变文字效果<br>
+         ✅ 响应式设计适配<br>
+         ✅ 毛玻璃卡片效果<br>
+         ✅ 悬停动效优化</p>
+
+      <button class="button">智能生成填空题</button>
+      <button class="button">导出Docx文档</button>
+    </div>
+
+    <div class="card">
+      <h3>📖 预览效果</h3>
+      <p>这里是生成的填空题预览区域，支持实时查看和导出功能</p>
+    </div>
+  </div>
+
+  <script>
+    // 添加简单交互效果
+    document.querySelectorAll('.button').forEach(button => {
+      button.addEventListener('click', function() {
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          this.style.transform = '';
+        }, 150);
+      });
+    });
+  </script>
+</body>
+</html>

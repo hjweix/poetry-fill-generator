@@ -18,21 +18,22 @@
 /* 跳过链接 - 允许键盘用户快速跳过导航 */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 0;
-  background: #1890ff;
+  top: -100px;
+  left: 16px;
+  background: var(--cinnabar, #E54D42);
   color: white;
-  padding: 8px 16px;
+  padding: 12px 24px;
   z-index: 10000;
-  transition: top 0.3s;
+  transition: top 0.3s ease;
   text-decoration: none;
   font-weight: 500;
-  border-radius: 0 0 4px 0;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .skip-link:focus {
   top: 0;
-  outline: 3px solid #096dd9;
+  outline: none;
 }
 
 /* 高对比度模式支持 */

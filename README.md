@@ -201,7 +201,7 @@ vercel
 
 ## 许可证
 
-MIT License
+MIT License. See [LICENSE](./LICENSE).
 
 ## 贡献
 
